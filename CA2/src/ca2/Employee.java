@@ -21,16 +21,22 @@ public class Employee {
     //initialing the instance fields
     private String name;
     private String email;
-    private empNum int;
+    private int empNum;
+    
+    //defining static field: nextEmpNum, of type int and initialized to 1, which initialises empNum in the constructor.  Its value must then be incremented to give consecutive numbers to each newly created object. 
+    private static int nextEmpNum = 1;
     
     //initializing constructor 1 for default values:
-    public CA2(){
+    public Employee(){
         this.name = "Default";
         this.email = "Default";
-        this.empNum = 0;
+        this.empNum = nextEmpNum;
+        
+        //increment nextEmpNum for the next object
+        nextEmpNum++;
     }
     //constructor with values
-    public CA2 (String name, String email, int empNum){
+    public Employee (String name, String email, int empNum){
         this.name = name;
         this.email = email;
         this.empNum = empNum;
