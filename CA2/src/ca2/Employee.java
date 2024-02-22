@@ -35,13 +35,25 @@ public class Employee {
         //increment nextEmpNum for the next object
         nextEmpNum++;
     }
-    //constructor with values
+    
+    //constructor with values passed as parameters:
     public Employee (String name, String email, int empNum){
         this.name = name;
         this.email = email;
         this.empNum = empNum;
     }
     
+    //METHODS:
+    //Accessor methods to return name, email and empNum values.
+    public String getName(){
+        return name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public String getEmpNum(){
+        return empNum;
+    }
     
     public static void main(String[] args) {
         // TODO code application logic here
