@@ -28,8 +28,8 @@ public class Employee {
     
     //initializing constructor 1 for default values:
     public Employee(){
-        this.name = "Default";
-        this.email = "Default";
+        this.name = "Full Name ";
+        this.email = "default@email.com";
         this.empNum = nextEmpNum;
         
         //increment nextEmpNum for the next object
@@ -37,10 +37,18 @@ public class Employee {
     }
     
     //constructor with values passed as parameters:
-    public Employee (String name, String email, int empNum){
+    public Employee (String name, String email){
         this.name = name;
-        this.email = email;
-        this.empNum = empNum;
+        this.empNum = nextEmpNum;
+        nextEmpNum++;
+        
+        //ensure email lenght is acceptable before setting it
+        if (email.length()>3){
+            this.email = email;
+        } else {
+            System.out.println("Email length must be greater than 3 characters. Email not updated.");
+            this.email = "default@email.com";
+        }
     }
     
     //METHODS:
@@ -51,8 +59,23 @@ public class Employee {
     public String getEmail(){
         return email;
     }
-    public String getEmpNum(){
+    public int getEmpNum(){
         return empNum;
+    }
+    
+    //setEmail(String email) – to set the email field to a new value passed as a parameter.  
+    public void setEmail (String email){
+        //The value must not be accepted if its length is 3 or less.
+        if (email.length()>3){
+            this.email = email;
+        } else {
+            System.out.println("Email length must be greater than 3 characters. Email not updated.");
+        }
+    }
+    
+    //getNextEmpNum() - to return the current value of nextEmpNum
+    public static int getNextEmpNum() {
+        return nextEmpNum;
     }
     
     public static void main(String[] args) {
