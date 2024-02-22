@@ -17,7 +17,7 @@ email, of type String
 empNum, of type int
 */
 
-public class CA2 {
+public class Employee {
     //initialing the instance fields
     private String name;
     private String email;
