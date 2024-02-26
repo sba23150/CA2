@@ -24,7 +24,7 @@ public class Employee {
     private int empNum;
     
     //defining static field: nextEmpNum, of type int and initialized to 1, which initialises empNum in the constructor.  Its value must then be incremented to give consecutive numbers to each newly created object. 
-    private static int nextEmpNum = 1;
+    public static int nextEmpNum = 1;
     
     //initializing constructor 1 for default values:
     public Employee(){
@@ -76,10 +76,5 @@ public class Employee {
     //getNextEmpNum() - to return the current value of nextEmpNum
     public static int getNextEmpNum() {
         return nextEmpNum;
-    }
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+    }    
 }
