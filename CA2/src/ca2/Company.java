@@ -53,5 +53,35 @@ public class Company {
                 System.out.println(employee.getName());
             }
         }
-    }     
+    }    
+    
+    //A particular employee has been designated a “manager”. They are considered as a regular employee for all purposes, except that they also have a “username” and a “password” as fields, with corresponding getters and setters. 
+    public class Manager extends Employee {
+        private String username;
+        private String password;
+
+        // Constructor
+        public Manager(String name, int empNum, String username, String password) {
+            super(name, empNum);
+            this.username = username;
+            this.password = password;
+        }
+
+        // Getters and setters for username and password
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+    }
 }
