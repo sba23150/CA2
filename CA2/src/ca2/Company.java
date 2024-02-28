@@ -56,13 +56,14 @@ public class Company {
     }    
     
     //A particular employee has been designated a “manager”. They are considered as a regular employee for all purposes, except that they also have a “username” and a “password” as fields, with corresponding getters and setters. 
-    public class Manager extends Employee {
+    class Manager extends Employee {
         private String username;
         private String password;
 
         // Constructor
         public Manager(String name, int empNum, String username, String password) {
-            super(name, empNum);
+            this.name = name;
+            this.empNum = empNum;
             this.username = username;
             this.password = password;
         }

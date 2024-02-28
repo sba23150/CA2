@@ -19,9 +19,9 @@ empNum, of type int
 
 public class Employee {
     //initialing the instance fields
-    private String name;
-    private String email;
-    private int empNum;
+    String name;
+    String email;
+    int empNum;
     
     //defining static field: nextEmpNum, of type int and initialized to 1, which initialises empNum in the constructor.  Its value must then be incremented to give consecutive numbers to each newly created object. 
     public static int nextEmpNum = 1;
