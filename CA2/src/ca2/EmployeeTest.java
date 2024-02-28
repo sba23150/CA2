@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ca2;
+
+import ca2.Company.Manager;
+
 /**
  *
  * @author Tatiana Mota - sba23150
@@ -39,7 +42,7 @@ public class EmployeeTest {
         System.out.println("Value of variable nextEmpNum: " + Employee.nextEmpNum);
         
         
-        //(C)	Write the code to search and display the name of each of the employees in the projectGroup array, who have an employee number above the value stored in a variable called m.
+        //Part 1 (C)	Write the code to search and display the name of each of the employees in the projectGroup array, who have an employee number above the value stored in a variable called m.
         // Declaring m
         int m = 2; // Example value
 
@@ -51,5 +54,4 @@ public class EmployeeTest {
             }
         }
     }
-    
 }
